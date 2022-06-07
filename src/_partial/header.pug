@@ -1,0 +1,9 @@
+- let list =['标题1','标题2','标题3']
+
+header(class='bg-green-50 flex justify-around')
+    span(class='h-20 flex items-center') 
+        img(class='max-h-10' src="https://ts1.cn.mm.bing.net/th?id=OIP-C.HlxcT38HU35owfaBZHUmVwHaDt&w=177&h=170&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2")
+    nav(class="w-4/5")
+        ul(class='flex justify-between items-center w-full h-full')
+            each item in list
+                li(class="block")=item
