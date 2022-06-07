@@ -1,3 +1,4 @@
+- let imgArray = ['https://wallpapers.com/images/high/a-whisker-away-miyo-cat-mask-w1m8o4e5tgasgxju.jpg','https://wallpapers.com/images/high/a-whisker-away-rainy-town-1y6ekr496ylpc2j8.jpg']
 doctype html
 html(lang="en")
     head
@@ -6,10 +7,14 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="./index.css")
         title title
-    body 
-        include _partial/header.pug
-
-        include _partial/content.pug
-
-        include _partial/footer.pug
+    body
+        div(class='layout')
+            div(class='header')
+                include _partial/header.pug
+            div(class="content")
+                div(class='banner')
+                    each imgUrl in imgArray
+                        img(src=imgUrl, alt="")
+            div(class="footer")
+                include _partial/footer.pug
 
