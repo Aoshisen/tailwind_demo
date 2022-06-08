@@ -12,3 +12,8 @@
 .content {
     @apply flex-1;
 }
+
+.banner {
+    @apply max-w-full h-[825px] overflow-hidden;
+}
+
