@@ -11,11 +11,16 @@ html(lang="en")
         div(class='layout')
             div(class='header')
                 include _partial/header.pug
+                +header(['标题1','标题2','标题3'],'标题1')
             div(class="content")
                 div(class='banner')
-                    each imgUrl in imgArray
-                        img(src=imgUrl, alt="",class='w-full')
+                    - for(var i=0;i<imgArray.length;i++)
+                        img(src=imgArray[i], alt="" class='animate_class' index=i)
             div(class="footer")
                 include _partial/footer.pug
+                +footer('this is footer')
+        script(src="https://code.jquery.com/jquery-3.6.0.min.js") 
+        script(src="./scripts/index.js") 
+
 
 

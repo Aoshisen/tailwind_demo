@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes opacity {
+    0% {opacity:0;}
+    50% {opacity:1; }
+    100% {opacity:0;}
+}
+
 .layout{
    @apply flex flex-col min-h-screen ;
 }
@@ -14,6 +20,13 @@
 }
 
 .banner {
-    @apply max-w-full h-[825px] overflow-hidden;
+    @apply overflow-hidden whitespace-nowrap bg-slate-100;
 }
+.banner img {
+    @apply w-full inline-block;
+}
+.animate_class {
+    animation:opacity infinite ease-in-out 4s;
+}
+
 
