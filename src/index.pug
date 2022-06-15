@@ -14,8 +14,11 @@ html(lang="en")
                 +header(['标题1','标题2','标题3'],'标题1')
             div(class="content")
                 div(class='banner')
-                    - for(var i=0;i<imgArray.length;i++)
-                        img(src=imgArray[i], alt="" class='animate_class' index=i)
+                    each imgUrl in imgArray
+                        img(src=imgUrl, alt="" class='animate_class')
+                div(class='card-container')
+                    include components/card.pug
+                    +card('https://img-blog.csdnimg.cn/ae9bccf22a014e7b82e5e90c34e9a86d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATXJfQm9iY3A=,size_20,color_FFFFFF,t_70,g_se,x_16',"this is text")
             div(class="footer")
                 include _partial/footer.pug
                 +footer('this is footer')
